@@ -1,6 +1,10 @@
 ---
-sidebar_position: 4
+title: 開発用
+custom_edit_url: null 
+sidebar_position: 5
 ---
+
+以下はドキュメント作成のドキュメントです(開発用)
 
 # Markdown Features
 
@@ -61,13 +65,13 @@ You can reference images relative to the current file as well. This is particula
 
 Markdown code blocks are supported with Syntax highlighting.
 
-    ```jsx title="src/components/HelloDocusaurus.js"
-    function HelloDocusaurus() {
-        return (
-            <h1>Hello, Docusaurus!</h1>
-        )
-    }
-    ```
+```jsx title="src/components/HelloDocusaurus.js"
+function HelloDocusaurus() {
+    return (
+        <h1>Hello, Docusaurus!</h1>
+    )
+}
+```
 
 ```jsx title="src/components/HelloDocusaurus.js"
 function HelloDocusaurus() {
@@ -79,17 +83,17 @@ function HelloDocusaurus() {
 
 Docusaurus has a special syntax to create admonitions and callouts:
 
-    :::tip My tip
+:::tip My tip
 
-    Use this awesome feature option
+Use this awesome feature option
 
-    :::
+:::
 
-    :::danger Take care
+:::danger Take care
 
-    This action is dangerous
+This action is dangerous
 
-    :::
+:::
 
 :::tip My tip
 

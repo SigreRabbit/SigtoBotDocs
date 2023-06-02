@@ -1,0 +1,153 @@
+/t2i
+Text to Image, プロンプトから画像を生成する
+/i2i
+Image to Image, 画像から似た画像を生成する
+
+t2i・i2i共通オプション
+・prompt / プロンプト　生成するものを命令
+　英語カンマ区切り　前にある方が強く、()で囲むほど強くなる
+　例は"stable diffusion プロンプト"とかでググって
+・reference / 参考画像
+　参考にした画像の色合いやタッチを反映させる(すごい)
+・facefix / プロンプトで顔だけ再生成
+　全身画像など、顔がつぶれやすい場合に顔だけを再生成
+　プロンプトには表情や目の色、影になるならdrop shadowなど
+　※生成時間増・黒塗り率高のため、取扱注意
+・model / モデル
+　主に絵柄に影響する　Aは繊細、Bはシンプル、CはSDっぽい傾向
+　ALLで各モデルで同じ画像を生成　上がA1～A3、中央がB1～B3、下がC1～C3
+・vae / VAE
+　主に塗りや明るさに影響する　下記参照
+
+/t2i のみのオプション
+・jptext / 日本語文章
+　入力した場合自動翻訳してプロンプトに使う　短めに句点で区切る
+・resolution / 解像度
+　square:512x512　landscape:1024x576　portrait:576x1024
+　※square以外は生成枚数が4枚になる
+
+/i2i のみのオプション
+・image / 画像ファイル
+　正方形でない場合、短辺の長さで中心を切り抜くので注意
+・strength / 変化の強さ
+　0.2～0.8 デフォルト0.5　かなり影響が強い
+ーーー
+/i2t
+Image to Text, 画像からプロンプトを逆算する
+
+・image / 画像ファイル
+　切り抜きはたぶん必要ない　生成した画像でなくてもOK
+ーーー
+/coloring
+画像の輪郭を抽出し、着色する
+
+記載予定
+ーーー
+/upscale
+画像を高品質に拡大　AI画像以外も対応
+
+・image / 画像ファイル
+　縦横どちらも1280pxまで　長辺が640px以下の場合4倍、それ以外2倍に拡大
+・mode / 品質
+　Defaultはわずかに色合いの変化・細部の変化あり　Ultraはそれらが限りなく少ない
+　※推定所要時間は512x512のものなので、サイズによっては前後するかも
+ーーー
+/wipeout
+メッセージIDを指定して、メッセージとサーバの画像を完全に削除する
+
+・メッセージID: 数字
+　メッセージIDは、設定>詳細設定>開発者モードを有効にして右クリックで取得
+　※そのメッセージがあるチャットで実行すること
+ーーー
+使い方
+・とりあえず、/t2i で jptext に日本語を入れて作ってみる　例) 女の子、黒髪、Tシャツ
+　元にしたい画像があるなら、/i2i のimageに入れたり、/t2i の reference に入れる
+・できた中でいい感じのがあれば、/i2i をかけてみる
+　ちょっとした要素を変えるなら、プロンプトだけ指定　smile とか blonde hair とか
+　strength = 0.7 以上とかにすると、大きく変化をつけられる
+ーーー
+Tips
+・チャット欄で矢印キー上で、直前に入力したコマンドが出る
+　コマンドの青文字クリックしてコピペでもOK
+・推定所要時間の2倍とかかかったら、バグってるので教えて
+・サーバでもSigtoBotの個別チャットでも使える　個別がおすすめ
+・画像はローカルに全部保存してるけど、増えすぎたら消すかも
+ーーー
+VAE詳細
+　ClearVAE :  白が強め　線が細め
+　orangemix :  バランス (デフォルト)
+　kl-f8-anime2 :  彩度が高い　はっきりした影
+　proto-4 :  彩度が高い　ぼかしが強い
+　All :  VAEのみを変えて4枚生成
+ーーー
+おまけ
+・原神チャンネルでコードだけ入力するとURL投稿する機能がついている
+　正規表現的には ^[a-zA-Z0-9]{12}$
+
+
+
+入れてるLoRAメモ　あとでどこかにまとめる
+
+<>ごとコピペして、promptに入れると効果が出る
+最後の1を変えると強さが変わる　0は効果なし
+マイナスにすると逆の効果が出る (flat2なら、書き込みが増える)
+-1～1くらいで0.5刻みで調整するとよい
+
+・コピペだけでOK
+あごが丸くなる, <lora:marugao:1>, 
+目が大きくなる, <lora:0a0a-gka26:1>, 
+線が太くなる, <lora:boldline2:1>, 
+顔が幼くなる, <lora:loli:1>, 
+シンプルになる, <lora:flat2:1>, 
+背景がシンプルになる, <lora:flatBG:1>, 
+頬が赤くなる, <lora:hohoaka:1>, 
+線がなくなる, <lora:noline:1>, 
+縁取り線がつく, <lora:dtl-key:1>, 
+
+・一緒に特定ワードを入れる
+かっこよく光る, <lora:GlowingRunesAI:1>, 
+→どれか入れる, GlowingRunesAI_red, GlowingRunesAI_blue, GlowingRunesAI_green
+チノちゃん寄りになる, <lora:last:1>, 
+→chinokafuu, を入れる
+しぐと — 昨日 23:10
+/coloring を追加
+画像の輪郭を抽出して塗りなおす
+modeごとに動作が違う
+
+・Illust
+彩色済み画像を入れると、完全に塗りなおす
+・Linedraw
+線画を入れると、塗る
+・Rakugaki
+落書きを入れると、いい感じにイラスト化する
+
+いずれも、colorrefに元画像を一部塗りつぶしたものを入れると、その色に近づく 
+しぐと — 昨日 12:51
+https://civitai.com/ ここでキャラ名英語で検索して左上にLORAってあるやつは簡単に入れられるので言えば入れる　MODELとかCHECKPOINTはモデルなので入れられるけど容量を食う
+Civitai | Stable Diffusion models, embeddings, LoRAs and more
+Civitai is a platform for Stable Diffusion AI Art models. Browse a collection of thousands of models from a growing number of creators. Join an engaged community in reviewing models and sharing images with prompts to get you started.
+しぐと — 2023/05/31 22:51
+・model = ALLで9種類のモデルで同じイラストを生成
+順番は
+A1 A2 A3
+B1 B2 B3
+C1 C2 C3
+しぐと — 2023/05/31 21:17
+t2i・i2i共通オプション
+・facefix / プロンプトで顔だけ再生成
+　　全身画像など、顔がつぶれやすい場合に顔だけを再生成
+　　プロンプトには表情や目の色、影になるならdrop shadowなど
+　※生成時間が増え、また生成が難しい場合は黒塗りになる 
+しぐと — 2023/05/30 23:52
+・KawAICE、CuteYukiMix
+　アニメkawaii系
+・Kuroneko_animemix
+　SD系　線弱め
+・3AB
+　SD系　線強め
+・NijiV5style
+　水彩
+・BreakDomainAnime
+　メカとか背景強め
+・Girlish-Bloom
+　フラット特化　promptに<lora:flat2:1>推奨
