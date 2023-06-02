@@ -17,19 +17,20 @@ sidebar_position: 3
 
 ## モデル一覧
 
-|モデル名|イラスト傾向|ファイル名|ソース|
+|モデル名|イラスト傾向|ソース|バージョン等|
 |:--|:--|:--|:--|
-|A1_Counterfeit|陰影が強い　顔や背景が特に精細|Counterfeit-V2.5_fp16.safetensors|[Hugging Face](https://huggingface.co/gsdf/Counterfeit-V2.5)|
-|A2_BreakDomainAnime|リアル寄りアニメ風　メカや建物に強い||[Civitai](https://civitai.com/models/72675/breakdroidanime)|
-|A3_ClossmixSIERRA|やや陰影が強い　年齢低めになる||[Hugging Face](https://huggingface.co/Yashiro/Closs_mix)|
+|A1_Counterfeit|陰影が強い　顔や背景が特に精細|[Hugging Face](https://huggingface.co/gsdf/Counterfeit-V2.5)|V2.5|
+|A2_BreakDomainAnime|リアル寄りアニメ風　メカや建物に強い|[Civitai](https://civitai.com/models/72675/breakdroidanime)|_a0440|
+|A3_ShiratakiMix|動きがある構図が出やすい
+|[Hugging Face](https://huggingface.co/Vsukiyaki/ShiratakiMix)|fixed|
 |||||
 |B1_BNOM（デフォルト）|強い特徴がなく、高い完成度|||
-|B2_Kawaiiniji|繊細な線　珍しい構図が出やすい||[Civitai](https://civitai.com/models/52922/kawaiiniji)|
-|B3_El_Dorado|比較的平面的なイラスト|El Dorado.safetensors|[Hugging Face](https://huggingface.co/deadman44/SD_Anime_Merged_Models)|
+|B2_Kawaiiniji|繊細な線　珍しい構図が出やすい|[Civitai](https://civitai.com/models/52922/kawaiiniji)|v3|
+|B3_El_Dorado|比較的平面的なイラスト|El Dorado.safetensors|[Hugging Face](https://huggingface.co/deadman44/SD_Anime_Merged_Models)|無印|
 |||||
-|C1_CuteYukiMix|SDとイラストの中間点||[Civitai](https://civitai.com/models/28169/cuteyukimix)|
-|C2_KawAICE|かなりSD寄り　淡い色使い|||
-|C3_threeAB|はっきりSD　塗りや線が強い|||
+|C1_CuteYukiMix|SDとイラストの中間点|[Civitai](https://civitai.com/models/28169/cuteyukimix)|v3.0|
+|C2_KawAICE|かなりSD寄り　淡い色使い|[Civitai](https://civitai.com/models/51057/aice-or-kawaice)|Channel|
+|C3_threeAB|はっきりSD　塗りや線が強い|[Hugging Face](https://huggingface.co/sleepotimer/Model_A)|3AB|
 |||||
 |ALL|モデルだけ変えて9枚生成|||
 
