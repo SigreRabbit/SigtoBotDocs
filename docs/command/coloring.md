@@ -105,8 +105,8 @@ sidebar_position: 4
 |選択肢|詳細|
 |:--|:--|
 |square（デフォルト）|正方形（512x512）|
-|landscape|横長（1024x576）|
-|portrait|縦長（576x1024）|
+|landscape|横長（960x576）|
+|portrait|縦長（576x960）|
 
 - square以外は生成枚数が4枚になる（生成時間が増えるため）
 
