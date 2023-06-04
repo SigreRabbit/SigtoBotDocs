@@ -23,7 +23,7 @@ sidebar_position: 4
 
 - mode = Illust の場合、色のついた通常の画像
   
-- mode = Linedraw、Rakugaki の場合、無彩色の線画 / 落書き
+- mode = Linedraw / Rakugaki / Raku2Lineの場合、無彩色の線画 / 落書き
 
   - 線画や落書きは、薄い背景に濃い線で描くこと（白背景に黒線を想定）
 
@@ -46,6 +46,7 @@ sidebar_position: 4
     |Illust|彩色済画像の色変化|
     |Linedraw|線画の着色|
     |Rakugaki|落書きのイラスト化|
+    |Raku2Line|落書きの線画化|
 
 - それぞれ内部処理が異なるが、ざっくり言うと輪郭の残し具合が違う
 
@@ -53,9 +54,15 @@ sidebar_position: 4
 
   - Linedrawのみ、加えて線画自体を線として残しやすい
 
+- Raku2Lineは、処理的にはRakugakiと同じ
+
+  - colorrefにimageをもう一度入れることで線画っぽくしている
+
+  - colorrefは反映されない
+
 ---
 
-### reference / 参考画像
+### colorref / 参考画像
 
 ---
 
@@ -76,6 +83,8 @@ sidebar_position: 4
   - 影響はイラストによるので、まずはやってみる
 
 - 元画像とは完全に異なる画像を入れても元画像の輪郭は残るので、面白い画像が作れるかも
+
+- mode = Raku2Line の場合、設定の必要はない（色はつけないので）
 
 ---
 
