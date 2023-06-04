@@ -13,6 +13,8 @@ sidebar_position: 5
 
 - /coloring で、image = 落書き画像、mode = Rakugaki でできるけど、微調整や色を細かく指定したい場合以下のような感じでできる
 
+- 以下はprompt設定なしだけど、適宜設定したほうが思い通りに作れるはず
+
 1. 落書きを用意する
 
     ![raku2line_01](./img/raku2line_01.png)
