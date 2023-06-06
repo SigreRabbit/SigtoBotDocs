@@ -21,10 +21,10 @@ sidebar_position: 3
 |:--|:--|:--|:--|
 |A1_Counterfeit|陰影が強い　顔や背景が特に精細|[Hugging Face](https://huggingface.co/gsdf/Counterfeit-V2.5)|V2.5|
 |A2_BreakDomainAnime|リアル寄りアニメ風　メカや建物に強い|[Civitai](https://civitai.com/models/72675/breakdroidanime)|_a0440|
-|A3_BetterMixAnime|リアル寄りアニメ風　ちょっと明るめ|[Civitai](https://civitai.com/models/15426/bettermixanime)|v3.0|
+|A3_pikasNewGen|繊細な線　雰囲気リアル寄り|[Civitai](https://civitai.com/models/47067/pikas-new-generation)|v2.0|
 |||||
-|B1_pikasNewGen|繊細な線　雰囲気リアル寄り|[Civitai](https://civitai.com/models/47067/pikas-new-generation)|v2.0|
-|B2_Kawaiiniji|繊細な線　珍しい構図が出やすい|[Civitai](https://civitai.com/models/52922/kawaiiniji)|v3|
+|B1_Kawaiiniji|繊細な線　珍しい構図が出やすい|[Civitai](https://civitai.com/models/52922/kawaiiniji)|v3|
+|B2_BetterMixAnime|リアル寄りアニメ風　ちょっと明るめ|[Civitai](https://civitai.com/models/15426/bettermixanime)|v3.0|
 |B3_ShiratakiMix|多少リアル寄りのアニメ調|[Hugging Face](https://huggingface.co/Vsukiyaki/ShiratakiMix)|fixed|
 |||||
 |C1_BNOM（デフォルト）|完成度の高いアニメ調（デフォルト）|[Hugging Face](https://huggingface.co/WarriorMama777/OrangeMixs)|BloodNightOrangeMix|
