@@ -74,7 +74,7 @@ promptのどこでもいいので、以下の形式で記入する
 ||瞳孔が開いた目になる|```<lora:Crazy_ExpressionsV2:1>,```<br/>+ 感情を指定 ```crazy face,``` (狂気), ```scared,``` (怯え)|
 ||いろいろな目になる|```<lora:moreExpressions:1>,``` + 以下いずれか<br/>```>_<,``` ```@_@``` ```=_=, closed eyes,``` ```X X,``` ```:Ɪ, pout,``` ```._.,``` ```Jitome,```|
 ||||
-|特殊|かっこよく光る|```<lora:GlowingRunesAI:1>, GlowingRunesAI_red,```<br/>```<lora:GlowingRunesAI:1>, GlowingRunesAI_blue,```<br/>```<lora:GlowingRunesAI:1>, GlowingRunesAI_green,```|
+|特殊|かっこよく光る|```<lora:GlowingRunesAI:1>, GlowingRunesAI_red,```<br/>```<lora:GlowingRunesAI:1>, GlowingRunesAI_paleblue,```<br/>```<lora:GlowingRunesAI:1>, GlowingRunesAI_green,```<br/>```<lora:GlowingRunesAI:1>, GlowingRunesAI_purple,```<br/>```<lora:GlowingRunesAI:1>, GlowingRunesAI_yellow,```<br/>```<lora:GlowingRunesAI:1>, GlowingRunesAI_pink,```|
 ||ねんどろいど化する|```<lora:blindbox_v1_mix:1>, chibi, full body,```|
 ||メカボディになる|```<lora:MechaGirl:1>, mechanical parts,```|
 ||片目から炎|```<lora:FlamingEye:1>, flaming eye, eye trail,```|
@@ -85,6 +85,6 @@ promptのどこでもいいので、以下の形式で記入する
 ||動物が丸っこくなる|```<lora:cute00d_v1:1>, cute00d,``` + animalまたは動物の名前等|
 ||||
 |キャラクター|チノちゃんになる|```<lora:KafuuChinoV1:1>, chinokafuu,```|
-||銀狼になる|```<lora:Sv4:1>, SilverWolfV4,```|
+||銀狼になる|```<lora:Sv5:1>, SilverWolfV5,```|
 ||Among Usになる|```<lora:amongus:0.8>, amongus,```|
 ||マキマさんになる|```<lora:MakimaTestV1:1>, makima \(chainsaw man\),```|
